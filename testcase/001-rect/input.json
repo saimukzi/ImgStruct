@@ -1,12 +1,18 @@
 {
   "_comment":"001-rect: 100x100 image, with red rect in x10-60,y20-80",
-  "output":{
-    "size":{
-      "w":100,
-      "h":100
-    },
-    "element":{
-      "element_type":"rect",
+  "output_dict":{
+    "output":{
+      "size":{
+        "w":100,
+        "h":100
+      },
+      "element_id":"000"
+    }
+  },
+  "element_dict":{
+    "000":{
+      "id":"000",
+      "type":"rect",
       "rect_param":{
         "style":{
           "fill_color":"#ff0000"
