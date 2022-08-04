@@ -1,0 +1,9 @@
+{
+  "_comment":"000-empty: 100x100 transparent image",
+  "output":{
+    "size":{
+      "w":100,
+      "h":100
+    }
+  }
+}
