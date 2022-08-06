@@ -12,13 +12,18 @@ class Main:
     parser.add_argument('--output_id', nargs='?')
     self.args = parser.parse_args()
 
-    print(f'input_path={self.args.input_path}, output_path={self.args.output_path}, output_path={self.args.output_id}')
+    print(f'input_path={self.args.input_path}, output_path={self.args.output_path}, output_id={self.args.output_id}')
   
     self.input_data = futsu.json.path_to_data(self.args.input_path)
     self.output_data = self.get_output_data()
     #self.root_element = render_element(self.output_data['element'])
-    self.img = np.zeros((self.output_data['size']['h'], self.output_data['size']['w'], 4), np.uint8)
-    cv.imwrite(self.args.output_path, self.img)
+    self.img_f1 = np.zeros((self.output_data['size']['h'], self.output_data['size']['w'], 4), np.float)
+    tmp = self.img_f1
+    tmp = tmp.clip(min=0, max=1)
+    tmp = tmp * 255
+    tmp = tmp.astype(np.uint8)
+    self.img_iff = tmp
+    cv.imwrite(self.args.output_path, self.img_iff)
 
   def get_output_data(self):
     output_dict = self.input_data['output_dict']
