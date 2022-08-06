@@ -16,5 +16,5 @@ pip install futsu
 export PYTHONPATH=${PYTHONPATH}:${PROJECT_PATH}/src
 # echo PYTHONPATH=${PYTHONPATH}
 
-python3 -m img_struct.img_struct 000-empty/input.json 000-empty/output.json
-python3 -m img_struct.img_struct 001-rect/input.json  001-rect/output.json
+python3 -m img_struct.img_struct 000-empty/input.json 000-empty/output.png
+python3 -m img_struct.img_struct 001-rect/input.json  001-rect/output.png

@@ -1,10 +1,10 @@
 {
-  "_comment":"000-empty: 100x100 transparent image",
+  "_comment":"000-empty: 80x60 transparent image",
   "output_dict":{
     "output":{
       "size":{
-        "w":100,
-        "h":100
+        "w":80,
+        "h":60
       }
     }
   }
