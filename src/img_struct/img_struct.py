@@ -21,6 +21,7 @@ class Main:
     tmp = self.img_f1
     tmp = tmp.clip(min=0, max=1)
     tmp = tmp * 255
+    tmp = tmp.round()
     tmp = tmp.astype(np.uint8)
     self.img_iff = tmp
     cv.imwrite(self.args.output_path, self.img_iff)
