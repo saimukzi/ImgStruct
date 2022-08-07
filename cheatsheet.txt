@@ -7,7 +7,7 @@ python3 -m venv venv
 venv\Scripts\activate
 
 python -m pip install --upgrade pip wheel
-pip install futsu opencv-python
+pip install flake8 futsu opencv-python
 
 -- Test --
 
