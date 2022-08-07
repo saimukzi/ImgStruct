@@ -5,16 +5,27 @@ import numpy as np
 
 class Main:
 
-  def main(self):
+  def main_cmd(self):
     parser = argparse.ArgumentParser()
     parser.add_argument('input_path')
     parser.add_argument('output_path')
     parser.add_argument('--output_id', nargs='?')
-    self.args = parser.parse_args()
+    args = parser.parse_args()
+    
+    self.main(
+      input_path = args.input_path,
+      output_path = args.output_path,
+      output_id = args.output_id
+    )
 
-    print(f'input_path={self.args.input_path}, output_path={self.args.output_path}, output_id={self.args.output_id}')
-  
-    self.input_data = futsu.json.path_to_data(self.args.input_path)
+  def main(self, input_path, output_path, output_id=None):
+    print(f'input_path={input_path}, output_path={output_path}, output_id={output_id}')
+    
+    self.input_path = input_path
+    self.output_path = output_path
+    self.output_id = output_id
+
+    self.input_data = futsu.json.path_to_data(input_path)
     self.output_data = self.get_output_data()
     #self.root_element = render_element(self.output_data['element'])
     self.img_f1 = np.zeros((self.output_data['size']['h'], self.output_data['size']['w'], 4), np.float)
@@ -24,18 +35,22 @@ class Main:
     tmp = tmp.round()
     tmp = tmp.astype(np.uint8)
     self.img_iff = tmp
-    cv.imwrite(self.args.output_path, self.img_iff)
+    cv.imwrite(output_path, self.img_iff)
 
   def get_output_data(self):
     output_dict = self.input_data['output_dict']
-    if self.args.output_id == None:
+    if self.output_id == None:
       return list(output_dict.values())[0]
-    return output_dict[self.args.output_id]
+    return output_dict[self.output_id]
 
 
-def main():
+def main_cmd():
   main = Main()
-  main.main()
+  main.main_cmd()
+
+def main(*argv, **kwargs):
+  main = Main()
+  main.main(*argv, **kwargs)
 
 if __name__ == '__main__':
-  main()
+  main_cmd()
