@@ -11,7 +11,10 @@ pip install futsu opencv-python
 
 -- Test --
 
-python testcase/run.py testcase/000-empty/input.json testcase/000-empty/output.png
+# all case
+python testcase/run.py
+# single case
+python testcase/run.py 000-empty
 
 -- Syntax --
 
