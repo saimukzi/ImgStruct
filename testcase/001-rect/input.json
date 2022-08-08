@@ -6,14 +6,8 @@
         "w":100,
         "h":100
       },
-      "element_id":"000"
-    }
-  },
-  "element_dict":{
-    "000":{
-      "id":"000",
-      "type":"rect",
-      "rect_param":{
+      "element":{
+        "type":"rect",
         "style":{
           "fill_color":"#ff0000"
         },
