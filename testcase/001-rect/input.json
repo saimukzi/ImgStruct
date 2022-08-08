@@ -1,10 +1,10 @@
 {
-  "_comment":"001-rect: 100x100 image, with red rect in x10-60,y20-80",
+  "_comment":"001-rect: 80x60 image, with red rect in x30-50,y10-20",
   "output_dict":{
     "output":{
       "size":{
-        "w":100,
-        "h":100
+        "w":80,
+        "h":60
       },
       "element":{
         "type":"rect",
@@ -12,10 +12,10 @@
           "fill_color":"#ff0000"
         },
         "rect":{
-          "x0":10,
-          "x1":60,
-          "y0":20,
-          "y1":80
+          "x0":30,
+          "x1":50,
+          "y0":10,
+          "y1":20
         }
       }
     }
