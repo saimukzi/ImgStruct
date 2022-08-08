@@ -7,7 +7,7 @@
         "h":60
       },
       "element":{
-        "type":"rect",
+        "class":"rect",
         "style":{
           "fill_color":"#ff0000"
         },
