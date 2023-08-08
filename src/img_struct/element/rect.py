@@ -10,7 +10,6 @@ def render_element(element_data, main):
     h = y1 - y0
 
     if ( w <= 0 ) or ( h <= 0 ): return None
-
     if 'style' not in element_data: return None
     
 

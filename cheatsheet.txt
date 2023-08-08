@@ -13,6 +13,7 @@ pip install flake8 futsu opencv-python
 
 # all case
 python testcase/run.py
+
 # single case
 python testcase/run.py 000-empty
 

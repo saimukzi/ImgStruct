@@ -9,7 +9,8 @@
       "element":{
         "class":"rect",
         "style":{
-          "fill_color":"#ff0000"
+          "fill_color":"#ff0000",
+          "stroke_width":
         },
         "rect":{
           "x0":30,
